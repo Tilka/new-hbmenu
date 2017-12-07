@@ -20,6 +20,7 @@ static void startup(void* unused)
 {
 	menuScan("sdmc:/3ds");
 	uiEnterState(UI_STATE_MENU);
+	workerSchedule(netloaderTask, NULL);
 }
 
 const char* __romfs_path = "sdmc:/boot.3dsx";
